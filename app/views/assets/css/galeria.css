@@ -1,0 +1,30 @@
+.no-images {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.image-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.actions {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.actions a {
+    color: #feda4a;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}

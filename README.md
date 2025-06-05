@@ -1,1 +1,11 @@
-# webapp
+WEBAPP/
+│
+├── app/
+│   │   
+│   └── views
+│      
+│
+├────index.php
+
+
+
