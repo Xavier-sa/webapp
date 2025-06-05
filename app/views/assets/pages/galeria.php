@@ -18,19 +18,18 @@ $imagens = $stmt->fetchAll();
 <body>
 
     <h2>Galeria Imagens</h2>
-    <div class="card">
-        <?php if (count($imagens) > 0): ?>
-            <?php foreach ($imagens as $img): ?>
-                <img src="<?php echo htmlspecialchars($img['caminho']); ?>" alt="Imagem" style="max-width:200px;">
+    <div class="gallery">
+    <?php if (count($imagens) > 0): ?>
+        <?php foreach ($imagens as $img): ?>
+            <div class="card">
+                <img src="<?php echo htmlspecialchars($img['caminho']); ?>" alt="Imagem">
+                <div class="card-actions">
+                    <a class="btn download" href="download.php?id=<?= $img['id'] ?>">Download</a>
+                    <a class="btn delete" href="delete.php?id=<?= $img['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir esta imagem?')">Excluir</a>
+                </div>
+            </div>
+        <?php endforeach; ?>
 
-                <a href="download.php?id=<?= $img['id'] ?>">Download</a>
-                
-                <a href="delete.php?id=<?= $img['id'] ?>"
-                    onclick="return confirm('Tem certeza que deseja excluir esta imagem?')">
-                    Excluir
-                </a>
-
-            <?php endforeach; ?>
         <?php else: ?>
             <p>Nenhuma imagem encontrada na galeria.</p>
         <?php endif; ?>
@@ -42,3 +41,6 @@ $imagens = $stmt->fetchAll();
 </body>
 
 </html>
+
+
+

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $tamanhoMaximo = 16 * 1024 * 1024; // 16MB
         $mimeTypesPermitidas = ['image/jpeg', 'image/png', 'image/gif'];
         $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
-        $diretorioDestino = __DIR__ . '/uploads/';
+        $diretorioDestino = __DIR__ . '../img/uploads/';
 
         // Validações
         if ($imagem['size'] > $tamanhoMaximo) {
