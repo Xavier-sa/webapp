@@ -1,6 +1,6 @@
 <?php require_once 'db.php'; ?>
 
-<form action="" method="get">
+<form action="pesquisa.php" method="get">
     <input type="text" name="q" placeholder="Pesquisar..." value="<?= $_GET['q'] ?? '' ?>">
     <button>Buscar</button>
 </form>
