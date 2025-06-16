@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+.usuario-card,
+.imagem-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.usuario-imagens {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
 
 body {
     font-family: Arial, sans-serif;
