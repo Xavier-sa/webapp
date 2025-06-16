@@ -17,6 +17,7 @@
     4.1 Construa um cadastro de usuarios que tenha os atributos nome email e imagen de peril 
     4.2 A imagen  de perfil deve ser um registro da tabela imagens 
     4.3 O cadastro de usuario deve ser uma tela a parte
-    4.4 O upload de imagens do site deve ser alterado cada imagem ser vinculada com um usuario. OBS: a tabela imagens não deve ser alterada, deve ser criado uma nova tabela 
+    4.4 O upload de imagens do site deve ser alterado cada imagem ser vinculada com um usuario.
+             OBS: a tabela imagens não deve ser alterada, deve ser criado uma nova tabela 
     4.5 O grid de imagens publicas deve permitir ver o usuario que fez upload da imagem
     4.6 O usuario deve conseguir ver todas as iamgens que ele fez upload no sistema

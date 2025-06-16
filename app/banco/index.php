@@ -19,6 +19,12 @@
     <input type="file" name="imagem" required>
     <button type="submit">Enviar Imagem</button>
 </form>
+<form action="inserir_usuario.php" method="post">
+    <label>Nome do usuário:</label>
+    <input type="text" name="nome" required>
+    <button type="submit">Cadastrar</button>
+</form>
+
 
 <?php
 $busca = $_GET['q'] ?? '';
@@ -35,7 +41,7 @@ while ($img = $res->fetch_assoc()) {
     echo "<div style='margin: 10px; text-align: center;'>
         <img src='{$img['caminho']}' width='150'><br>
         {$img['nome_original']}<br>
-        <a href='delete.php?id={$img['id']}' onclick=\"return confirm('Excluir?')\">Deletar</a>
+        <a href='delete.php?id={$img['id']}' onclick=\"return confirm('Excluir?')\">Excluir</a>
     </div>";
 }
 echo "</div>";

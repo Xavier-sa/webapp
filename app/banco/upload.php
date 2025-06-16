@@ -2,9 +2,21 @@
 require 'db.php';
 
 $uploadDir = 'uploads/';
+$maxSize = 16 * 1024 * 1024; // 16MB
+$allowedTypes = ['image/jpeg', 'image/png'];
+$extensoesPermitidas = ['jpg', 'jpeg', 'png'];
 
 if (!is_dir($uploadDir)) {
     mkdir($uploadDir, 0755, true); // Cria o diretório, se não existir
+}
+$allowedTypes = ['image/jpeg', 'image/png'];
+if (!in_array($_FILES['imagem']['type'], $allowedTypes)) {
+    die("Tipo de arquivo não permitido");
+}
+
+$maxSize = 16 * 1024 * 1024; // 16MB
+if ($_FILES['imagem']['size'] > $maxSize) {
+    die("Arquivo muito grande. Máximo 16MB");
 }
 
 if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
@@ -13,6 +25,11 @@ if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
     $ext = pathinfo($nomeOriginal, PATHINFO_EXTENSION);
     $nomeSeguro = uniqid('img_', true) . '.' . $ext;
     $caminho = $uploadDir . $nomeSeguro;
+
+    $maxSize = 16 * 1024 * 1024; // 16MB
+    if ($_FILES['imagem']['size'] > $maxSize) {
+        die("Arquivo muito grande. Máximo 16MB");
+    }
 
     if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho)) {
         // Salva na tabela imagens
@@ -34,4 +51,3 @@ if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
 } else {
     echo "Erro no upload.";
 }
-?>

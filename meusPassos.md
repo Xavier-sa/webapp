@@ -13,10 +13,10 @@ webapp/
 ├── upload.php             # script de upload
 ├── delete.php             # exclusão de imagem
 ├── index.php              # galeria + pesquisa
-├── style.css              # estilo da galeria
 └── banco.sql              # script para criar a tabela no banco
-### 🧰 Tratamento de Erros
 
-* Arquivos com nomes iguais **não sobrescrevem**: usamos `uniqid()` para gerar nomes únicos.
-* Ao **deletar**, primeiro apagamos a imagem da pasta com `unlink()`.
-* Se houver **erro de upload**, o código trata e informa.
+
+
+
+
+proximo passo devo incluir paginacao thiago mencionou isso .. aulas passadas sobre a az..
