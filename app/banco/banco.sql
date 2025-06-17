@@ -28,3 +28,17 @@ CREATE TABLE imagem_usuario (
 
 -- Inserindo usuários para teste
 INSERT INTO usuarios (nome) VALUES ('Wellington'), ('Xavier');
+
+
+alter table usuarios
+    add column foto_perfil varchar(255);
+
+
+ALTER TABLE usuarios DROP COLUMN foto_perfil;
+
+
+ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS imagem_perfil_id INT NULL;
+
+-- aqui separo para separar foto de perfil das outras imagens
+ALTER TABLE imagens ADD COLUMN IF NOT EXISTS tipo VARCHAR(20) DEFAULT 'geral';
+    
