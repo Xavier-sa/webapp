@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db   = 'webapp';
+$db   = 'upload';
 
 $conn = new mysqli($host, $user, $pass, $db);
 

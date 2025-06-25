@@ -1,8 +1,8 @@
-drop database if exists webapp;
+drop database if exists upload;
 
-CREATE  DATABASE  webapp;
+CREATE  DATABASE  upload;
 
-USE webapp;
+USE upload;
 
 CREATE TABLE imagens (
     id INT AUTO_INCREMENT PRIMARY KEY,

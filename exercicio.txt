@@ -21,3 +21,19 @@
              OBS: a tabela imagens não deve ser alterada, deve ser criado uma nova tabela 
     4.5 O grid de imagens publicas deve permitir ver o usuario que fez upload da imagem
     4.6 O usuario deve conseguir ver todas as iamgens que ele fez upload no sistema
+
+
+
+5 Autenticacao ( entrar no sistema fazer login)
+
+
+somente usuario logado pode fazer upload na galeria
+o upload deve vincular a imagem com o usuario logado
+cadastro do usuario deve salavar a senha(criptografada)
+tela login 
+logout 
+
+
+t 1.fez login com usuario (thiago) e senha (123)
+t 2.
+t 3.

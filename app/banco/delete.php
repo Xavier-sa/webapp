@@ -8,7 +8,7 @@ $res = $conn->query("SELECT * FROM imagens WHERE id = $id");
 
 if ($res->num_rows > 0) {
     $img = $res->fetch_assoc();
-
+  
     // Deleta o arquivo físico
     if (file_exists($img['caminho'])) {
         unlink($img['caminho']);
